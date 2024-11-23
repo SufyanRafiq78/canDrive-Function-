@@ -1,2 +1,47 @@
 # canDrive-Function-
 Unit test cases for canDrive function using Java.
+
+Below are test cases for the canDrive function using java:
+
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class CanDriveTest {
+	
+	@Test
+    void testMethod1() {
+        Assertions.assertEquals(false, CanDriveHelper.canDrive(Integer.MIN_VALUE));
+    }
+    
+    @Test
+    void testMethod2() {
+        Assertions.assertEquals(false, CanDriveHelper.canDrive(Integer.MIN_VALUE + 1));
+    }
+    
+    @Test
+    void testMethod3() {
+        Assertions.assertEquals(false, CanDriveHelper.canDrive(15));
+    }
+    
+    @Test
+    void testMethod4() {
+        Assertions.assertEquals(true, CanDriveHelper.canDrive(16));
+    }
+    
+    @Test
+    void testMethod5() {
+        Assertions.assertEquals(true, CanDriveHelper.canDrive(17));
+    }
+    
+    @Test
+    void testMethod6() {
+        Assertions.assertEquals(true, CanDriveHelper.canDrive(Integer.MAX_VALUE - 1));
+    }
+    
+    @Test
+    void testMethod7() {
+        Assertions.assertEquals(true, CanDriveHelper.canDrive(Integer.MAX_VALUE));
+    }
+
+}
